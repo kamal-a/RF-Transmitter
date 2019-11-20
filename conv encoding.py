@@ -66,8 +66,8 @@ I = 0
     
 #asciisymbols = 146       
 #SourceEnc = 0
-ConvEnc = [0] * 146
-#ConvEnc = []
+#ConvEnc = [0] * 146
+ConvEnc = []
 print("empty list is", ConvEnc)
 #np1 = N & Poly1
 #np2 = N & Poly2
@@ -81,18 +81,26 @@ for j in range(0, 74):
     SourceEnc <<= 1
     #j += 1
     
-    ConvEnc = parity(N & Poly1)
+    #ConvEnc = parity(N & Poly1)
+    #CE1 = ConvEnc
+    ConvEnc.append(parity(N & Poly1))
     print("ConvEnc1 :", ConvEnc)
 
-    ConvEnc = parity(N & Poly2)
+    #ConvEnc = parity(N & Poly2)
+    #CE2 = ConvEnc
+    ConvEnc.append(parity(N & Poly2))
     print("ConvEnc2 is:", ConvEnc)
+
+    #ConvEnc = CE1 + CE2
+ 
+print("ConvEnc is:", ConvEnc, end=" ")
    
-print("N is:", N)
-print("new source encoding is:", SourceEnc)
+#print("N is:", N)
+#print("new source encoding is:", SourceEnc)
 #print("np1 is:", np1)
 #print("np2 is:", np2)
 
     
 
-printdata("Convolutional encoded data:", ConvEnc)
+#printdata("Convolutional encoded data:", ConvEnc)
 
