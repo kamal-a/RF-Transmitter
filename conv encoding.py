@@ -56,21 +56,13 @@ def printdata(title, dat):
             #print("/n")
     print("\n\n")
         
-
-
-
 Poly1=0xF2D05351
 Poly2=0xE4613C47
 N = 0
 I = 0
     
-#asciisymbols = 146       
-#SourceEnc = 0
-#ConvEnc = [0] * 146
 ConvEnc = []
 print("empty list is", ConvEnc)
-#np1 = N & Poly1
-#np2 = N & Poly2
 
 
 for j in range(0, 74):
@@ -79,19 +71,12 @@ for j in range(0, 74):
         N = N | 1
         
     SourceEnc <<= 1
-    #j += 1
     
-    #ConvEnc = parity(N & Poly1)
-    #CE1 = ConvEnc
     ConvEnc.append(parity(N & Poly1))
     print("ConvEnc1 :", ConvEnc)
 
-    #ConvEnc = parity(N & Poly2)
-    #CE2 = ConvEnc
     ConvEnc.append(parity(N & Poly2))
     print("ConvEnc2 is:", ConvEnc)
-
-    #ConvEnc = CE1 + CE2
  
 print("ConvEnc is:", ConvEnc, end=" ")
    
@@ -100,7 +85,13 @@ print("ConvEnc is:", ConvEnc, end=" ")
 #print("np1 is:", np1)
 #print("np2 is:", np2)
 
-    
+n = [0,1,2,3,4]
+for i in range (0, 6):
+x[i] = 5
+print(x)
 
 #printdata("Convolutional encoded data:", ConvEnc)
 
+#asciisymbols = 146       
+#SourceEnc = 0
+#ConvEnc = [0] * 146
