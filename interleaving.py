@@ -59,10 +59,7 @@ def printdata(title, dat):
 
 
 
-Poly1=0xF2D05351
-Poly2=0xE4613C47
-N = 0
-I = 0
+Poly1 = 
     
 #asciisymbols = 146       
 #SourceEnc = 0
