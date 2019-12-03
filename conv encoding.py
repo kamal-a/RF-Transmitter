@@ -85,13 +85,23 @@ print("ConvEnc is:", ConvEnc, end=" ")
 #print("np1 is:", np1)
 #print("np2 is:", np2)
 
-n = [0,1,2,3,4]
-for i in range (0, 6):
-x[i] = 5
-print(x)
+#n = [0,1,2,3,4]
+#for i in range (0, 6):
+#x[i] = 5
+#print(x)
 
 #printdata("Convolutional encoded data:", ConvEnc)
 
 #asciisymbols = 146       
 #SourceEnc = 0
 #ConvEnc = [0] * 146
+
+input = [0, 1, 2 ,3]
+print(input)
+
+output = [ ]
+
+interleaved = [3, 2, 1, 0]
+
+for index in interleaved:
+    output.append(input(index)

@@ -1,9 +1,8 @@
-#pivectors[146] =[0,0,1,0,0,1,1,1,1,0,1,0,1,0,1,0,0,1,0,0,0,1,0,0,0,1,1,0,0,1,
-    #           1,1,1,0,0,1,1,1,1,1,0,0,1,1,0,1,1,1,1,0,1,0,1,1,0,1,1,0,1,0,
-   #             0,0,0,0,1,1,1,1,1,0,1,0,1,0,0,0,0,0,1,1,1,1,1,0,1,0,0,1,0,0,
- ##               1,0,1,0,0,0,0,1,0,0,1,1,0,0,0,0,0,1,1,0,0,0,0,1,1,0,0,1,1,1,
- #               0,1,1,1,0,1,1,0,1,0,1,0,1,0,0,0,0,1,1,1,0,0,0,0,1,1]
- 
+#pivectors[146] =[0,0,1,0,0,1,1,1,1,0,1,0,1,0,1,0,0,1,0,0,0,1,0,0,0,1,1,0,0,1,1,1,1,0,0,1,1,1,1,1,0,0,1,1,0,1,1,1,1,0,1,0,1,1,0,1,1,0,1,0,0,0,0,0,1,1,1,1,1,0,1,0,1,0,0,0,0,0,1,1,1,1,1,0,1,0,0,1,0,0,
+#                1,0,1,0,0,0,0,1,0,0,1,1,0,0,0,0,0,1,1,0,0,0,0,1,1,0,0,1,1,1,
+#                0,1,1,1,0,1,1,0,1,0,1,0,1,0,0,0,0,1,1,1,0,0,0,0,1,1]
+PI4Vectors = [0,0,1,0,0,1,1,1,1,0,1,0,1,0,1,0,0,1,0,0,0,1,0,0,0,1,1,0,0,1,1,1,1,0,0,1,1,1,1,1,0,0,1,1,0,1,1,1,1,0,1,0,1,1,0,1,1,0,1,0,0,0,0,0,1,1,1,1,1,0,1,0,1,0,0,0,0,0,1,1,1,1,1,0,1,0,0,1,0,0,1,0,1,0,0,0,0,1,0,0,1,1,0,0,0,0,0,1,1,0,0,0,0,1,1,0,0,1,1,1,0,1,1,1,0,1,1,0,1,0,1,0,1,0,0,0,0,1,1,1,0,0,0,0,1,1]
+
 pichar = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ /'
 #print(pichar.index('G is', 16))
 o = pichar.find("O")
@@ -108,8 +107,9 @@ P = 0
 R = 0
 PI4symbols = 146 
 interleaved = [ ]
+R_array = [ ]
 
-for I in range (0, 145):
+for I in range (0, 256):
     for BitNo in range (0, 8):
 
 
@@ -120,37 +120,46 @@ for I in range (0, 145):
             R = R & ~(1 << (7 - BitNo))
     
    
-    #ConvEnc.append(R)
-        
-    #printdata("interleaved is:", ConvEnc)
-       
-        #interleaved[:: R]
-        #if ((P < PI4symbols) and (R < PI4symbols)):
-    #if(3
-
-        #interleaved[R] = ConvEnc
-        #interleaved.append(interleaved)
-    #interleaved = ConvEnc
-        
-    interleaved.append(R)
-        #interleaved = sorted(ConvEnc, key = R, reverse= False)
-        
-
-       
-    # interleaved.append(R)
-    print("interleaved data:", interleaved)
     
-    #print("binary equivlant is:", bin(interleaved))
-print("extra:", ConvEnc[32])
+    if ((P < PI4symbols) and (R < PI4symbols)):
+   
+
+       
+        
+        R_array.append(R)
+       
+        
+
+       
+   
+    print("The equivlent R array is:", R_array)
+
+for index in R_array:
+    interleaved.append(ConvEnc[index])
+print("Convolutional encoding data is:", ConvEnc)
+print("interleaved data is", interleaved)
+    
+    
+print("length of conv encoding array:", len(ConvEnc))
+print("length of interleaving data is:", len(interleaved))
 print("I is:", I)
 print("R is:", R)
-#print("interleaved is:", interleaved)
 
 
-    #interleaved = ConvEnc
-    #P +=1 
+new_interleaved = [i * 2 for i in interleaved]
+print("double interleaved:", new_interleaved)
 
+merge_sync = [ ] 
+for i in range(0, len(interleaved)): 
+    merge_sync.append(new_interleaved[i] + PI4Vectors[i])
 
+print("data symbols is:", merge_sync ) 
 
 # Merge with sync vector 
 
+#def symbols():
+#    for I in range (0, 145):
+#        symbols[I] = PI4Vector[I] or (interleaved[I] << 1)
+#        printdata("symbols", symbols)
+
+#symbols()
