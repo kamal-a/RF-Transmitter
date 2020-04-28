@@ -83,14 +83,14 @@ for j in range(0, 73):
 print("ConvEnc is:", ConvEnc, end=" ")
 
 # interleaving encoding
-import array
-def parity2(value2):
-    for bitno in range (0, 8):
-        if (((i >> bitno) & 0x01) == 0x01):
-            value2 |= 1 << (7 - bitno)
-        else:
-            value2 &= ~(1 << (7 - bitno))
-    return value2
+#import array
+#def parity2(value2):
+#    for bitno in range (0, 8):
+#        if (((i >> bitno) & 0x01) == 0x01):
+#            value2 |= 1 << (7 - bitno)
+#        else:
+#            value2 &= ~(1 << (7 - bitno))
+#    return value2
 
 P = 0 
 R = 0
@@ -121,7 +121,7 @@ for I in range (0, 256):
 
        
    
-    print("The equivlent R array is:", R_array)
+print("The equivlent R array is:", R_array)
 
 for index in R_array:
     interleaved.append(ConvEnc[index])
