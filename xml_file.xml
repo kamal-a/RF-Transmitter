@@ -9,6 +9,7 @@
         <name>PI4-ENCODER</name>
         <key>block_pi4_encoder</key>
         <import>from gnuradio import blocks</import>
+        <make>blocks.pi4_encoder($vlen)</make>
         <sink> 
                 <name>msg_in</name>
                 
