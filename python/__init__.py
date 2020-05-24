@@ -31,5 +31,5 @@ except ImportError:
 	pass
 
 # import any pure python here
-from PI4block import PI4block
+from pi4_encoder import pi4_encoder
 #

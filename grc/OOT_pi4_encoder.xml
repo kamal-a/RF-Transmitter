@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<block>
+        <name>PI4 Encoder</name>
+        <key>pi4_encoder</key>
+        <category>[PI4]</category>
+        <import>import pi4</import>
+        <make>pi4.pi4_encoder()</make>
+        <sink> 
+                <name>msg_in</name>
+                <type>msg</type>
+        </sink>
+        <source> 
+                <name>out</name>
+                <type>complex</type>
+        </source>
+        <source>
+                <name>clear_input</name>
+                <type>msg</type>
+        </source>
+</block> 

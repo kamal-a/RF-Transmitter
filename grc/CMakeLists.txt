@@ -18,5 +18,5 @@
 # Boston, MA 02110-1301, USA.
 
 install(FILES
-    OOT_PI4block.xml DESTINATION share/gnuradio/grc/blocks
+    OOT_pi4_encoder.xml DESTINATION share/gnuradio/grc/blocks
 )

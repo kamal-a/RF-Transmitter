@@ -21,9 +21,9 @@
 
 from gnuradio import gr, gr_unittest
 from gnuradio import blocks
-from PI4block import PI4block
+from pi4_encoder import pi4_encoder
 
-class qa_PI4block (gr_unittest.TestCase):
+class qa_pi4_encoder (gr_unittest.TestCase):
 
     def setUp (self):
         self.tb = gr.top_block ()
@@ -38,4 +38,4 @@ class qa_PI4block (gr_unittest.TestCase):
 
 
 if __name__ == '__main__':
-    gr_unittest.run(qa_PI4block, "qa_PI4block.xml")
+    gr_unittest.run(qa_pi4_encoder, "qa_pi4_encoder.xml")

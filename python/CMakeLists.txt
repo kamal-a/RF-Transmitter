@@ -31,7 +31,7 @@ endif()
 GR_PYTHON_INSTALL(
     FILES
     __init__.py
-    PI4block.py DESTINATION ${GR_PYTHON_DIR}/OOT
+    pi4_encoder.py DESTINATION ${GR_PYTHON_DIR}/OOT
 )
 
 ########################################################################
@@ -41,4 +41,4 @@ include(GrTest)
 
 set(GR_TEST_TARGET_DEPS gnuradio-OOT)
 set(GR_TEST_PYTHON_DIRS ${CMAKE_BINARY_DIR}/swig)
-GR_ADD_TEST(qa_PI4block ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_PI4block.py)
+GR_ADD_TEST(qa_pi4_encoder ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_pi4_encoder.py)
