@@ -1,9 +1,0 @@
-/usr/local/lib/cmake/OOT/OOTConfig.cmake
-/usr/local/include/OOT/api.h
-/usr/local/lib/python2.7/dist-packages/OOT/__init__.py
-/usr/local/lib/python2.7/dist-packages/OOT/PI4block.py
-/usr/local/lib/python2.7/dist-packages/OOT/__init__.pyc
-/usr/local/lib/python2.7/dist-packages/OOT/PI4block.pyc
-/usr/local/lib/python2.7/dist-packages/OOT/__init__.pyo
-/usr/local/lib/python2.7/dist-packages/OOT/PI4block.pyo
-/usr/local/share/gnuradio/grc/blocks/OOT_PI4block.xml
