@@ -5,7 +5,7 @@ import pmt
 
 textboxvalue = ""
 
-class my_sync_block(gr.sync_block):  # other base classes are basic_block, decim_block, interp_block
+class pi4_encoder(gr.sync_block):  # other base classes are basic_block, decim_block, interp_block
     """Embedded Python Block example - a simple multiply const"""
 
     def __init__(self):  # only default arguments here
